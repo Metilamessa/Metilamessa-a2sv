@@ -8,12 +8,13 @@ class Solution:
             if command[i] == 'G':
                 result += 'G'
                 i += 1
-            elif command[i:i+2] == '()':
-                result += 'o'
-                i += 2
-            elif command[i:i+4] == '(al)':
-                result += 'al'
-                i += 4
+            else:
+                if command[i:i+2] == '()':
+                    result += 'o'
+                    i += 2
+                else: 
+                    result += 'al'
+                    i += 4
 
         return result
         
