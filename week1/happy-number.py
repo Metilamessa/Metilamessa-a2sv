@@ -17,19 +17,3 @@ class Solution:
                 n = n // 10
             n =temp
         return False
-#         digits = []   
-#         converted = str(n)
-#         for i in converted:
-#             visited_before = set()
-#             while int(i)>0 and i not in visited_before:
-                
-#                 visited_before.add(i)
-#                 square = pow(int(i), 2)
-#                 digits.append(square)
-#                 s = sum(digits)
-#                 i = str(s)
-#                 if i == "1":
-            #         return True
-            
-            # return False
-        
