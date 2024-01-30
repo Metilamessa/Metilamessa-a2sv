@@ -1,13 +1,9 @@
 class Solution:
-    def maxIceCream(self, costs: List[int], coins: int) -> int:
-        costs.sort()  
-        max_num = 0  
+  def maxIceCream(self, costs: List[int], coins: int) -> int:
+    for i, cost in enumerate(sorted(costs)):
+      if coins >= cost:
+        coins -= cost
+      else:
+        return i
 
-        for cost in costs:
-            if coins >= cost:
-                coins -= cost
-                max_num += 1
-            else:
-                break
-
-        return max_num
+    return len(costs)
